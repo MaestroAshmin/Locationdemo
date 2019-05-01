@@ -1,0 +1,9 @@
+{%  extends "detail/base.html" %}
+{% block content %}
+        <form method="POST" action="/calculate_nearby/">
+           {% csrf_token %}
+            Hostel Name:
+            <input type="text" name="hostel_name" placeholder="Name"/><br/>
+            <button class="btn btn-outline-info" type="submit">Find</button>
+        </form>
+{% endblock content %}

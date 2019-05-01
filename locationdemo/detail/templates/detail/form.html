@@ -1,0 +1,13 @@
+{%  extends "detail/base.html" %}
+{% block content %}
+        <form method="POST" action="/add_detail/">
+           {% csrf_token %}
+            College name:
+            <input type="text" name="college_name" placeholder="Name"/><br/>
+            Street:
+            <input type="text" name="Street" placeholder="street"/><br/>
+            City:
+            <input type ="text" name="City" placeholder="City"/><br/>
+                <button class="btn btn-outline-info" type="submit">Add</button>
+        </form>
+{% endblock content %}
